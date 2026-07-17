@@ -4,8 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 // CONFIGURAÇÃO — edite estes valores antes de publicar
 // ============================================================
 const CONFIG = {
+  MAKE_WEBHOOK_URL: "https://hook.us2.make.com/e9h94kbkrn7pfovn8rxvm9hpcgh6ikrr",
   CTA_CURSO_GRATUITO: "https://youtube.com/playlist?list=PLiaMfvC6IZ-MkhteJIG_BX95iqZb0jcho&si=C9M63La3tKn9m9Nu",
-  MAKE_WEBHOOK_URL: "https://hook.us2.make.com/..."
   PREVIEW_MODE: false,
 };
 // ============================================================
