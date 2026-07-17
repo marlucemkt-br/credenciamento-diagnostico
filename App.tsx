@@ -224,6 +224,7 @@ async function enviarParaMake(dados) {
   } catch (e) {
     console.error("Webhook falhou:", e);
   }
+}
 
 const s = {
   green: "#2d6a2d", greenLight: "#5a9e3a", greenDark: "#1a3d1a",
