@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 // CONFIGURAÇÃO — edite estes valores antes de publicar
 // ============================================================
 const CONFIG = {
-  MAKE_WEBHOOK_URL: "https://hook.us2.make.com/e9h94kbkrn7pfovn8rxvm9hpcgh6ikrr",
   CTA_CURSO_GRATUITO: "https://youtube.com/playlist?list=PLiaMfvC6IZ-MkhteJIG_BX95iqZb0jcho&si=C9M63La3tKn9m9Nu",
   PREVIEW_MODE: false,
 };
@@ -213,7 +212,7 @@ Respostas de ${nome}: objetivo=${respostas.p1} | momento=${respostas.p2} | preoc
 async function enviarParaMake(dados) {
   if (CONFIG.MAKE_WEBHOOK_URL.startsWith("COLE_AQUI")) return;
   try {
-    await fetch(CONFIG.MAKE_WEBHOOK_URL, {
+    await fetch("/api/make", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dados),
     });
