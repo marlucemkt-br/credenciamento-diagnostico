@@ -54,9 +54,9 @@ export default async function handler(req, res) {
     }
 
     const texto = data.output
-  ?.flatMap((item) => item.content || [])
-  ?.find((content) => content.type === "output_text")
-  ?.text;
+      ?.flatMap((item) => item.content || [])
+      ?.find((content) => content.type === "output_text")
+      ?.text;
 
     if (!texto) {
       return res.status(500).json({
