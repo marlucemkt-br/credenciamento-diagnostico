@@ -212,13 +212,18 @@ Respostas de ${nome}: objetivo=${respostas.p1} | momento=${respostas.p2} | preoc
 
 async function enviarParaMake(dados) {
   if (CONFIG.MAKE_WEBHOOK_URL.startsWith("COLE_AQUI")) return;
+
   try {
-    await fetch(CONFIG.MAKE_WEBHOOK_URL, ...)
-      method: "POST", headers: { "Content-Type": "application/json" },
+    await fetch(CONFIG.MAKE_WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(dados),
     });
-  } catch (e) { console.error("Webhook falhou:", e); }
-}
+  } catch (e) {
+    console.error("Webhook falhou:", e);
+  }
 
 const s = {
   green: "#2d6a2d", greenLight: "#5a9e3a", greenDark: "#1a3d1a",
